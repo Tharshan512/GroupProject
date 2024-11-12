@@ -11,8 +11,8 @@
                     <input type="text" class="form-control" id="TeamNames" placeholder="Enter the Team Names" name="TeamNames" required>
                 </div>
                 <div class="form-group">
-                    <label for="Date">Date</label>
-                    <input type="text" class="form-control" id="Date" placeholder="Enter when the tournament starts" name="Date" required>
+                    <label for="timetextfield">Calender</label>
+                    <input type="datetime-local" class="form-control" id="timetextfield" placeholder="Calender" name="Date" value="<%= Tournament.Date %>" required>
                 </div>
                 <div class="form-group">
                     <label for="Location">Location</label>
@@ -26,6 +26,7 @@
                     <label for="Winner">Winner of the Tournament</label>
                     <input type="text" class="form-control" id="Winner" placeholder="Winner" name="Winner" required>
                 </div>
+                
                 <button class="btn btn-primary" type="submit">Submit
                 <i class="fas fa-edit"></i></button>  
                <button class="btn btn-warning" type="button" 

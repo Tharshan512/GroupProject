@@ -6,25 +6,24 @@
         <div class="offset-md-3 col-md-6">
             <h1><%= title %></h1>
             <form class="form" method="POST">
-                <div class="form-group">
-                    <label for="nameTextField">Tournament Title</label>
-                    <input type="text" class="form-control" id="nameTextField" placeholder="Enter the Tournament Title" name="Name" value="<%= Tournament.Name %>" required>
+                 <label for="TeamNames">TeamNames</label>
+                    <input type="text" class="form-control" id="TeamNames" placeholder="Enter the Team Names" name="TeamNames" required>
                 </div>
-                <div class="form-group">
-                    <label for="authorTextField">Tournament Author</label>
-                    <input type="text" class="form-control" id="authorTextField" placeholder="Enter the Tournament Author" name="Author" value="<%= Tournament.Author %>" required>
-                </div>
-                <div class="form-group">
-                    <label for="publishedTextField">Published</label>
-                    <input type="text" class="form-control" id="publishedTextField" placeholder="Enter the Published year" name="Published" value="<%= Tournament.Published %>" required>
-                </div>
-                <div class="form-group">
-                    <label for="descriptionTextArea">Tournament Description</label>
-                    <textarea type="text" class="form-control" id="descriptionTextArea"  placeholder="enter the Tournament Description" name="Description" required><%= Tournament.Description %></textarea>
-                </div>
-                <div class="form-group">
+               <div class="form-group">
                     <label for="timetextfield">Calender</label>
                     <input type="datetime-local" class="form-control" id="timetextfield" placeholder="Calender" name="Date" value="<%= Tournament.Date %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="Location">Location</label>
+                    <input type="text" class="form-control" id="Location" placeholder="Enter the Location" name="Location" required>
+                </div>
+                <div class="form-group">
+                    <label for="Description">Tournament Description</label>
+                    <textarea type="text" class="form-control" id="Description"  placeholder="Enter the Tournament Description" name="Description" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="Winner">Winner of the Tournament</label>
+                    <input type="text" class="form-control" id="Winner" placeholder="Winner" name="Winner" required>
                 </div>
                 <button class="btn btn-primary" type="submit">Submit
                 <i class="fas fa-edit"></i></button>  
