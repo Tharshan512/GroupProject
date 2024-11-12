@@ -10,79 +10,42 @@
     padding: 0;
 }
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f3f4f6;
     color: #1f2937;
-    line-height: 1.6;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
+    text-align: center; /* center text  */
 }
 
 .container {
     width: 90%;
     max-width: 800px;
     background-color: #ffffff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-header {
-    margin-bottom: 30px;
-}
-
-.logo-container {
-    margin-bottom: 20px;
-}
-
-.team-logo {
-    width: 120px; 
-    height: auto;
-    border-radius: 50%; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    font-size: 2.5rem;
+a {
     color: #1d4ed8; 
-    margin-bottom: 10px;
-}
-
-p {
-    font-size: 1.1rem;
-    color: #6b7280; 
-    margin-bottom: 30px;
-}
-
-.create-tournament-button {
-    display: inline-block;
-    background-color: #1d4ed8; 
-    color: #ffffff; 
     text-decoration: none; 
-    padding: 12px 30px;
-    font-size: 1rem;
-    border-radius: 25px; 
-    transition: background-color 0.3s, transform 0.2s;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    font-weight: bold; 
+    margin-top: 20px; 
+    display: inline-block; 
 }
 
-.create-tournament-button:hover {
-    background-color: #2563eb; 
-    transform: translateY(-2px); 
+a:hover {
+    color: #2563eb; 
+    text-decoration: underline; 
 }
-
-.create-tournament-button:active {
-    transform: translateY(0); 
-}
-
-footer {
-    margin-top: 40px;
-    font-size: 0.9rem;
-    color: #9ca3af; 
-}
-
