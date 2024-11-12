@@ -2,9 +2,9 @@ var express = require('express');
 var router = express.Router();
 let mongoose = require('mongoose');
 // telling my router that I have this model
-let Tournament = require('../model/tournament');
-const tournament = require('../model/tournament');
-let tournamentController = require('../controllers/tournament.js')
+let Tournament = require('../model/tournament.js');
+//const tournament = require('../model/tournament.js');
+//let tournamentController = require('../Controllers/tournament.js')
 /* Get route for the tournament list - Read Operation */
 /*
 GET,

@@ -1,1 +1,1 @@
-module.exports={"URI":"mongodb://127.0.0.1:27017/TournamentLib"}
+module.exports={"URI":"mongodb+srv://Project1Access:Test123@cluster0.9zdn5.mongodb.net/TournamentSchedule?retryWrites=true&w=majority&appName=Cluster0"}

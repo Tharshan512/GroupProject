@@ -3,11 +3,11 @@
 const mongoose = require("mongoose");
 
 let tournamentModel = mongoose.Schema({
-    Name: String,
-    Author: String,
-    Published: String,
+    TeamNames: String,
+    Date: String,
+    Location: String,
     Description: String,
-    Price: Number
+    Winner: String
 },
 {
     collection:"Bio_tournaments"
