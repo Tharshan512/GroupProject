@@ -11,9 +11,14 @@
                 <p>Create and manage your tournaments with ease.</p>
             </header>
     
-            <main>
-                <a href="/create" class="nav-item">Create a tournament</a>
-            </main>
+            <li class="create-tournament-button">
+            <% if(title=="Tournaments") { %>
+              <a class="nav-link active" href="/tournamentslist">
+            <% } else {%>
+              <a class="nav-link" href="/tournamentslist">
+            <% } %>  
+            <i class="fa-solid fa-tournament"></i> Create A tournament here</a>
+          </li>
         </body>
     </html>
 <%- include Partials/footer.ejs%>

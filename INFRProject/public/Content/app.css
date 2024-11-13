@@ -37,6 +37,7 @@ p {
 }
 
 .create-tournament-button {
+    display: inline-block;
     background-color: #4CAF50; 
     color: white; 
     border: none;
@@ -49,4 +50,8 @@ p {
 
 .create-tournament-button:hover {
     background-color: #2c692f; 
+}
+.create-tournament-button {
+    list-style: none; /* Removes bullet points */
+
 }
