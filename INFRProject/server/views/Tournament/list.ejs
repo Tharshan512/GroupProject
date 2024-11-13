@@ -11,19 +11,19 @@
             </a>
             <table class="table table-bordered table-striped table-hover">
                 <tr class="d-flex">
-                    <th class="text-center col-2">Name</th>
-                    <th class="text-center col-2">Author</th>
-                    <th class="text-center col-1">Published</th>
+                    <th class="text-center col-2">TeamNames</th>
+                    <th class="text-center col-2">Date</th>
+                    <th class="text-center col-1">Location</th>
                     <th class="col-4">Description</th>
-                    <th class="text-center col-1">Price</th>
+                    <th class="text-center col-1">Winner</th>
                 </tr>
                 <% for(let count=0;count<TournamentList.length;count++) { %>
                 <tr class="d-flex">
-                    <td class="text-center col-2"><%= TournamentList[count].Name %></td>
-                    <td class="text-center col-2"><%= TournamentList[count].Author %></td>
-                    <td class="text-center col-1"><%=TournamentList[count].Published%></td>
+                    <td class="text-center col-2"><%= TournamentList[count].TeamNames %></td>
+                    <td class="text-center col-2"><%= TournamentList[count].Date %></td>
+                    <td class="text-center col-1"><%=TournamentList[count].Location%></td>
                     <td class="col-4"><%= TournamentList[count].Description %> </td>
-                    <td class="text-center col-1"><%= TournamentList[count].Price %></td>
+                    <td class="text-center col-1"><%= TournamentList[count].Winner %></td>
                     <td class="text-center col-1">
                         <a href="/tournamentslist/edit/<%= TournamentList[count]._id%>"
                             class="btn btn-primary btn-sm">

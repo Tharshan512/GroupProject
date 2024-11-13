@@ -45,11 +45,11 @@ router.get('/add',async(req,res,next)=>{
 router.post('/add',async(req,res,next)=>{
     try{
         let newTournament = Tournament({
-            "Name":req.body.Name,
-            "Author":req.body.Author,
-            "Published":req.body.Published,
+            "TeamNames":req.body.TeamNames,
+            "Date":req.body.Date,
+            "Location":req.body.Location,
             "Description":req.body.Description,
-            "Price":req.body.Price
+            "Winner":req.body.Winner
         });
         Tournament.create(newTournament).then(()=>{
             res.redirect('/tournamentslist');
@@ -87,11 +87,11 @@ router.post('/edit/:id',async(req,res,next)=>{
         let id=req.params.id;
         let updatedTournament = Tournament({
             "_id":id,
-            "Name":req.body.Name,
-            "Author":req.body.Author,
-            "Published":req.body.Published,
+            "TeamNames":req.body.TeamNames,
+            "Date":req.body.Date,
+            "Location":req.body.Location,
             "Description":req.body.Description,
-            "Price":req.body.Price
+            "Winner":req.body.Winner
         });
         Tournament.findByIdAndUpdate(id,updatedTournament).then(()=>{
             res.redirect('/tournamentslist')
