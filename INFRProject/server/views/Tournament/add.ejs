@@ -7,33 +7,35 @@
             <h1><%= title %></h1>
             <form class="form" method="POST">
                 <div class="form-group">
-                    <label for="TeamNames">TeamNames</label>
-                    <input type="text" class="form-control" id="TeamNames" placeholder="Enter the Team Names" name="TeamNames" required>
+                    <label for="TeamNames">Team Names</label>
+                    <textarea class="form-control" id="TeamNames" placeholder="Enter the Team Names" name="TeamNames" required></textarea>
                 </div>
                 <div class="form-group">
                     <label for="Date">Date</label>
-                    <input type="text" class="form-control" id="Date" placeholder="Enter the Tournament Date" name="Date" value="<%= Tournament.Date %>" required>
+                    <textarea class="form-control" id="Date" placeholder="Enter the Tournament Date" name="Date" required></textarea>
                 </div>
                 <div class="form-group">
                     <label for="Location">Location</label>
-                    <input type="text" class="form-control" id="Location" placeholder="Enter the Location" name="Location" required>
+                    <textarea class="form-control" id="Location" placeholder="Enter the Location" name="Location" required></textarea>
                 </div>
                 <div class="form-group">
                     <label for="Description">Tournament Description</label>
-                    <textarea type="text" class="form-control" id="Description"  placeholder="Enter the Tournament Description" name="Description" required></textarea>
+                    <textarea class="form-control" id="Description" placeholder="Enter the Tournament Description" name="Description" required></textarea>
                 </div>
                 <div class="form-group">
                     <label for="Winner">Winner of the Tournament</label>
-                    <input type="text" class="form-control" id="Winner" placeholder="Winner" name="Winner" required>
+                    <textarea class="form-control" id="Winner" placeholder="Winner" name="Winner" required></textarea>
                 </div>
                 
-                <button class="btn btn-primary" type="submit">Submit
-                <i class="fas fa-edit"></i></button>  
-               <button class="btn btn-warning" type="button" 
-                 onclick="window.history.back()">Cancel
-                    <i class="fas fa-undo"></i></button>  
+                <button class="btn btn-primary" type="submit">
+                    Submit <i class="fas fa-edit"></i>
+                </button>  
+                <button class="btn btn-warning" type="button" onclick="window.history.back()">
+                    Cancel <i class="fas fa-undo"></i>
+                </button>  
             </form>
         </div>
     </div>
 </div>
+
 <%- include ../Partials/footer.ejs%>
