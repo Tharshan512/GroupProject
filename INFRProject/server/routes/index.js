@@ -28,12 +28,22 @@ router.get('/contactus', function(req, res, next) {
 
 /* GET login page. */
 router.get('/login', function(req, res, next) {
-  res.render('login', { title: 'Login' });
+  res.render('Authentication/login',
+    {
+      title:'Login',
+      message:req.flash('loginMessage'),
+      displayName: req.user ? req.user.displayName:''
+    });
 });
 
 /* GET register page. */
 router.get('/register', function(req, res, next) {
-  res.render('register', { title: 'Register' });
+  res.render('Authentication/register',
+    {
+      title:'Register',
+      message:req.flash('registerMessage'),
+      displayName: req.user ? req.user.displayName:''
+    });
 });
 
 

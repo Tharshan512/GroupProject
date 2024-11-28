@@ -1,9 +1,13 @@
+let session = require('express-session');
+let passport = require('passport');
+let passportLocal = require('passport-local');
+let localStratagy = passportLocal.Strategy;
+let flash = require('connect-flash');
 let createError = require('http-errors');
 let express = require('express');
 let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
-
 let app = express();
 let indexRouter = require('../routes/index');
 let usersRouter = require('../routes/users');
@@ -24,6 +28,32 @@ mongoDB.once('open',()=>{
   console.log("Connected with the MongoDB")
 });
 mongoose.connect(DB.URI,{useNewURIParser:true,useUnifiedTopology:true})
+
+
+
+app.use(session({
+  secret:"SomeSecret",
+  saveUninitialized: false,
+  resave: false
+}))
+
+let cors = require('cors')
+let userModel = require('../model/user');
+let User = userModel.User;
+
+
+//implement a User Authentication
+passport.use(User.createStrategy());
+// serialize/deserialize user information
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+//initialize passport
+app.use(passport.initialize());
+app.use(passport.session());
+
+//initialize the flash
+app.use(flash());
 /* main().catch(err => console.log(err));
 
 async function main() {
