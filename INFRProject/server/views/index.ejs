@@ -1,24 +1,23 @@
-<%- include Partials/header.ejs%>
-<%- include Partials/main_nav.ejs%>
-    <!--Main content-->
-    </head>
-        <body>
-            <header>
-                <div class="logo-container">
-                 <img src="/Assets/images/logo.png" alt="Team Logo" class="team-logo"> 
-                </div>
-                <h1>Welcome to Our Tournament Website</h1>
-                <p>Create and manage your tournaments with ease.</p>
-            </header>
-    
-            <li class="create-tournament-button">
-            <% if(title=="Tournaments") { %>
-              <a class="nav-link active" href="/tournamentslist">
-            <% } else {%>
-              <a class="nav-link" href="/tournamentslist">
-            <% } %>  
-            <i class="fa-solid fa-tournament"></i> Create a tournament here</a>
-          </li>
-        </body>
-    </html>
-<%- include Partials/footer.ejs%>
+<%- include('Partials/header.ejs') %>
+<%- include('Partials/main_nav.ejs') %>
+<!--Main content-->
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="/Assets/images/logo.png" alt="Team Logo" class="team-logo"> 
+        </div>
+        <h1>Welcome to Our Tournament Website</h1>
+        <p>Create and manage your tournaments with ease.</p>
+    </header>
+
+    <li class="create-tournament-button">
+        <% if (title == "Tournaments") { %>
+            <a class="nav-link active" href="/tournamentslist">
+        <% } else { %>
+            <a class="nav-link" href="/tournamentslist">
+        <% } %>  
+        <i class="fa-solid fa-tournament"></i> Create a tournament here</a>
+    </li>
+</body>
+</html>
+<%- include('Partials/footer.ejs') %>
