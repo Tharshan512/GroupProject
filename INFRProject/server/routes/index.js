@@ -31,10 +31,6 @@ router.get('/contactus', function(req, res, next) {
   res.render('index', { title: 'Contact Us' });
 });
 
-<<<<<<< HEAD
-
-
-=======
 /* GET login page. */
 router.get('/login', function(req, res, next) {
   res.render('login', { title: 'Login' });
@@ -44,6 +40,6 @@ router.get('/login', function(req, res, next) {
 router.get('/register', function(req, res, next) {
   res.render('register', { title: 'Register' });
 });
->>>>>>> 5b3d4b50f97371c3c7d749e8253708d853eed9aa
+
 
 module.exports = router;
