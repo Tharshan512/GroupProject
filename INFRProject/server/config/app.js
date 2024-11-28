@@ -10,7 +10,6 @@ let usersRouter = require('../routes/users');
 let tournamentRouter = require('../routes/tournament');
 
 
-
 // view engine setup
 app.set('views', path.join(__dirname, '../views'));
 app.set('view engine', 'ejs');
@@ -42,7 +41,7 @@ app.use(express.static(path.join(__dirname, '../../public')));
 app.use(express.static(path.join(__dirname, '../../node_modules')));
 
 app.use('/', indexRouter);
-app.use('/', usersRouter);
+app.use('/users', usersRouter);
 app.use('/tournamentslist',tournamentRouter);
 // /project --> projectrouter
 // /contactus --> contactus
