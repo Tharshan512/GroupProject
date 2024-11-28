@@ -11,6 +11,7 @@ router.get('/', function (req, res, next) {
 router.get('/home', function (req, res, next) {
   res.render('index', { title: 'Home' });
 });
+<<<<<<< Updated upstream
 /* GET About page. */
 router.get('/aboutus', function (req, res, next) {
   res.render('index', { title: 'About us' });
@@ -27,6 +28,8 @@ router.get('/service', function (req, res, next) {
 router.get('/contactus', function (req, res, next) {
   res.render('index', { title: 'Contact Us' });
 });
+=======
+>>>>>>> Stashed changes
 
 /* GET login page. */
 router.get('/login', function (req, res, next) {
@@ -75,6 +78,5 @@ router.get('/login', function(req, res, next) {
       displayName: req.user ? req.user.displayName : ''
   });
 });
-
 
 module.exports = router;
