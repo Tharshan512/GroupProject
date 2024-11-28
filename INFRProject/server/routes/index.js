@@ -26,7 +26,6 @@ router.get('/contactus', function(req, res, next) {
   res.render('index', { title: 'Contact Us' });
 });
 
-<<<<<<< HEAD
 /* GET login page. */
 router.get('/login', function(req, res, next) {
   res.render('login', { title: 'Login' });
@@ -38,6 +37,4 @@ router.get('/register', function(req, res, next) {
 });
 
 
-=======
->>>>>>> parent of 5b3d4b5 (things)
 module.exports = router;
