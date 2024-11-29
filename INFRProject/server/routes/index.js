@@ -42,6 +42,24 @@ router.get('/login', function (req, res, next) {
     displayName: req.user ? req.user.displayName : '',
   });
 });
+/* POST login page. */
+router.post('/login', (req, res, next) => {
+  passport.authenticate('local', (err, user, info) => {
+      if (err) {
+          return next(err)
+      }
+      if (!user) {
+          req.flash('loginMessage', 'Authentication Error');
+          return res.redirect('/login');
+      }
+      req.login(user, (err) => {
+          if (err) {
+              return next(err)
+          }
+          return res.redirect('/');
+      })
+  }) (req,res,next)
+});
 
 /* GET register page. */
 router.get('/register', function (req, res, next) {
@@ -56,10 +74,13 @@ router.get('/register', function (req, res, next) {
 router.post('/register', function (req, res, next) {
   const { username, password, email, displayName } = req.body;
 
+
+  
+
   // Create a new user with passport-local-mongoose
   User.register(
-    new User({ username, email, displayName }),
-    password,
+    new User({ username:req.body.username, email:req.body.email, displayName:req.body.displayName }),
+    req.body.password,
     (err, user) => {
       if (err) {
         console.error(err);
@@ -72,14 +93,6 @@ router.post('/register', function (req, res, next) {
       res.redirect('/login');
     }
   );
-});
-
-router.get('/login', function(req, res, next) {
-  res.render('Authentication/login', {
-      title: 'Login',
-      message: req.flash('loginMessage') || '', // Ensure default if undefined
-      displayName: req.user ? req.user.displayName : ''
-  });
 });
 
 module.exports = router;
