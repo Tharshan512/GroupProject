@@ -58,7 +58,7 @@ router.post('/add',async(req,res,next)=>{
     catch(err)
     {
         console.error(err);
-        res.render('Tournament/list',{
+        res.render('tournamentslist',{
             error:'Error on the server'
         })
     }
