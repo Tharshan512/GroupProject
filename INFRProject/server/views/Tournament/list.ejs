@@ -6,12 +6,15 @@
         <div class="offset-md-1 col-md-10" style="background-color: grey;">
             <h1><%= title %></h1>
             <br>
+   <!--To add a tournament--> 
             <a href="/tournamentslist/add" class="btn btn-primary" role="button">
                 <i class="fas fa-plus-circle"></i> Add Tournament
             </a>
+    <!--Table format-->
             <table class="table table-bordered table-striped table-hover">
                 <thead>
                     <tr class="d-flex">
+    <!--Shows each of the topics on the table-->
                         <th class="text-center col-2">Team Names</th>
                         <th class="text-center col-2">Date</th>
                         <th class="text-center col-1">Location</th>
@@ -34,6 +37,7 @@
                                 <i class="fas fa-pencil-alt"></i> Edit
                             </a>
                         </td>
+        <!--Delete-->
                         <td class="text-center col-1">
                             <a href="/tournamentslist/delete/<%= tournament._id %>" class="btn btn-danger btn-sm">
                                 <i class="fas fa-trash-alt"></i> Delete
