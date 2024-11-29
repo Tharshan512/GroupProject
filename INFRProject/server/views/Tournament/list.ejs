@@ -1,42 +1,49 @@
-<%- include ../Partials/header.ejs%>
-<%- include ../Partials/main_nav.ejs%>
-<!--Content for the edit Operation-->
-<div class="container">
+<%- include('../Partials/header.ejs') %>
+<%- include('../Partials/main_nav.ejs') %>
+<!--Tournament Database-->
+<main class="container">
     <div class="row">
-        <div class="offset-md-3 col-md-6">
+        <div class="offset-md-1 col-md-10" style="background-color: grey;">
             <h1><%= title %></h1>
-            <form class="form" method="POST">
-                <div class="form-group">
-                    <label for="TeamNames">Team Names</label>
-                    <textarea class="form-control" id="TeamNames" placeholder="Enter the Team Names" name="TeamNames" required></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="Date">Date</label>
-                    <textarea class="form-control" id="Date" placeholder="Enter the Tournament Date" name="Date" required></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="Location">Location</label>
-                    <textarea class="form-control" id="Location" placeholder="Enter the Location" name="Location" required></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="Description">Tournament Description</label>
-                    <textarea class="form-control" id="Description" placeholder="Enter the Tournament Description" name="Description" required></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="Winner">Winner of the Tournament</label>
-                    <textarea class="form-control" id="Winner" placeholder="Winner" name="Winner" required></textarea>
-                </div>
-                
-                <button class="btn btn-primary" type="submit">
-                    Submit <i class="fas fa-edit"></i>
-                </button>  
-                <button class="btn btn-warning" type="button" onclick="window.history.back()">
-                    Cancel <i class="fas fa-undo"></i>
-                </button>  
-            </form>
+            <br>
+            <a href="/tournamentslist/add" class="btn btn-primary" role="button">
+                <i class="fas fa-plus-circle"></i> Add Tournament
+            </a>
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                    <tr class="d-flex">
+                        <th class="text-center col-2">Team Names</th>
+                        <th class="text-center col-2">Date</th>
+                        <th class="text-center col-1">Location</th>
+                        <th class="col-4">Description</th>
+                        <th class="text-center col-1">Winner</th>
+                        <th class="text-center col-1">Edit</th>
+                        <th class="text-center col-1">Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% TournamentList.forEach(tournament => { %>
+                    <tr class="d-flex">
+                        <td class="text-center col-2"><%= tournament.TeamNames %></td>
+                        <td class="text-center col-2"><%= tournament.Date %></td>
+                        <td class="text-center col-1"><%= tournament.Location %></td>
+                        <td class="col-4"><%= tournament.Description %></td>
+                        <td class="text-center col-1"><%= tournament.Winner %></td>
+                        <td class="text-center col-1">
+                            <a href="/tournamentslist/edit/<%= tournament._id %>" class="btn btn-primary btn-sm">
+                                <i class="fas fa-pencil-alt"></i> Edit
+                            </a>
+                        </td>
+                        <td class="text-center col-1">
+                            <a href="/tournamentslist/delete/<%= tournament._id %>" class="btn btn-danger btn-sm">
+                                <i class="fas fa-trash-alt"></i> Delete
+                            </a>
+                        </td>
+                    </tr>
+                    <% }) %>
+                </tbody>
+            </table>
         </div>
     </div>
-</div>
-
-<%- include ../Partials/footer.ejs%>
+</main>
 
