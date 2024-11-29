@@ -5,28 +5,34 @@
     <div class="row">
         <div class="offset-md-3 col-md-6">
             <h1><%= title %></h1>
+            <!-- Edit Tournament Form -->
             <form class="form" method="POST">
+                  <!-- Team Names spot -->
                 <div class="form-group">
                     <label for="TeamNames">Team Names</label>
                     <textarea class="form-control" id="TeamNames" placeholder="Enter the Team Names" name="TeamNames" required></textarea>
                 </div>
+                 <!-- Tournament Date spot -->
                 <div class="form-group">
                     <label for="Date">Date</label>
                     <textarea class="form-control" id="Date" placeholder="Enter the Tournament Date" name="Date" required></textarea>
                 </div>
+                <!-- Location spot -->
                 <div class="form-group">
                     <label for="Location">Location</label>
                     <textarea class="form-control" id="Location" placeholder="Enter the Location" name="Location" required></textarea>
                 </div>
+                 <!-- Tournament Description -->
                 <div class="form-group">
                     <label for="Description">Tournament Description</label>
                     <textarea class="form-control" id="Description" placeholder="Enter the Tournament Description" name="Description" required></textarea>
                 </div>
+                <!-- Winner spot -->
                 <div class="form-group">
                     <label for="Winner">Winner of the Tournament</label>
                     <textarea class="form-control" id="Winner" placeholder="Winner" name="Winner" required></textarea>
                 </div>
-                
+                <!-- Submit and Cancel Buttons -->
                 <button class="btn btn-primary" type="submit">
                     Submit <i class="fas fa-edit"></i>
                 </button>  
