@@ -1,51 +1,60 @@
-<nav class="navbar navbar-light fixed-top" style="background-color: #505050; padding: 5px 15px;">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/" style="color: white;">Tournament Maker</a>
-      <ul class="navbar-nav d-flex flex-row ms-auto" style="list-style: none; margin: 0; padding: 0;">
-        <!-- home -->
-        <li class="nav-item mx-2">
-          <% if (title == "Home") { %>
-            <a class="nav-link active" href="/home">
-              <img src="/Assets/images/logo.png" alt="Home" class="nav-image">
-            </a>
-          <% } else { %>
-            <a class="nav-link" href="/home">
-              <img src="/Assets/images/logo.png" alt="Home" class="nav-image">
-            </a>
-          <% } %>
-        </li>
-  
-        <!-- tournaments -->
-        <li class="nav-item mx-2">
-          <% if (title == "Tournaments") { %>
-            <a class="nav-link active" href="/tournamentslist" style="color: white;">
-              <i class="fa-solid fa-trophy"></i> Tournaments
-            </a>
-          <% } else { %>
-            <a class="nav-link" href="/tournamentslist" style="color: white;">
-              <i class="fa-solid fa-trophy"></i> Tournaments
-            </a>
-          <% } %>
-        </li>
-  
-        <!-- login -->
-        <li class="nav-item mx-2">
-          <% if (title == "Login") { %>
-            <a class="nav-link active" href="/login" style="color: white;">Login</a>
-          <% } else { %>
-            <a class="nav-link" href="/login" style="color: white;">Login</a>
-          <% } %>
-        </li>
-  
-        <!-- register -->
-        <li class="nav-item mx-2">
-          <% if (title == "Register") { %>
-            <a class="nav-link active" href="/register" style="color: white;">Register</a>
-          <% } else { %>
-            <a class="nav-link" href="/register" style="color: white;">Register</a>
-          <% } %>
-        </li>
-      </ul>
-    </div>
-  </nav>
+<nav class="navbar navbar-light fixed-top" style="background-color: #505050; padding: 5px 20px;">
+  <div class="container-fluid d-flex justify-content-between align-items-center">
+    <!-- Left spacer to center the brand -->
+    <div class="spacer" style="flex: 1;"></div>
+
+    <!-- Centered Navbar Brand -->
+    <a class="navbar-brand mx-auto" href="/" style="color: rgb(196, 196, 196); font-weight: bold; text-align: center;">
+      Tournament Maker
+    </a>
+
+    <!-- Right-aligned Navigation Items -->
+    <ul class="navbar-nav d-flex flex-row ms-auto" style="list-style: none; margin: 0; padding: 0; flex: 1; justify-content: flex-end;">
+      <!-- home -->
+      <li class="nav-item mx-2">
+        <% if (title == "Home") { %>
+          <a class="nav-link active" href="/home">
+            <img src="/Assets/images/logo.png" alt="Home" class="nav-image">
+          </a>
+        <% } else { %>
+          <a class="nav-link" href="/home">
+            <img src="/Assets/images/logo.png" alt="Home" class="nav-image">
+          </a>
+        <% } %>
+      </li>
+
+      <!-- tournaments -->
+      <li class="nav-item mx-2">
+        <% if (title == "Tournaments") { %>
+          <a class="nav-link active" href="/tournamentslist" style="color: rgb(196, 196, 196);">
+            <i class="fa-solid fa-trophy"></i> Tournaments
+          </a>
+        <% } else { %>
+          <a class="nav-link" href="/tournamentslist" style="color: rgb(196, 196, 196);">
+            <i class="fa-solid fa-trophy"></i> Tournaments
+          </a>
+        <% } %>
+      </li>
+
+      <!-- login -->
+      <li class="nav-item mx-2">
+        <% if (title == "Login") { %>
+          <a class="nav-link active" href="/login" style="color: rgb(194, 194, 194);">Login</a>
+        <% } else { %>
+          <a class="nav-link" href="/login" style="color: rgb(197, 197, 197);">Login</a>
+        <% } %>
+      </li>
+
+      <!-- register -->
+      <li class="nav-item mx-2">
+        <% if (title == "Register") { %>
+          <a class="nav-link active" href="/register" style="color: rgb(197, 197, 197);">Register</a>
+        <% } else { %>
+          <a class="nav-link" href="/register" style="color: rgb(197, 197, 197);">Register</a>
+        <% } %>
+      </li>
+    </ul>
+  </div>
+</nav>
+
   
