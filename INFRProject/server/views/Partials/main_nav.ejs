@@ -1,55 +1,51 @@
-<nav class="navbar navbar-light" style="background-color: #505050">
-  <div class="container-fluid">
-      <a class="navbar-brand" href="/">Tournament Maker</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto">
-              <!-- home -->
-              <li class="nav-item">
-                  <% if (title == "Home") { %>
-                      <a class="nav-link active" href="/home">
-                          <img src="/Assets/images/logo.png" alt="Home" class="nav-image">
-                      </a>
-                  <% } else { %>
-                      <a class="nav-link" href="/home">
-                          <img src="/Assets/images/logo.png" alt="Home" class="nav-image">
-                      </a>
-                  <% } %>
-              </li>
-
-              <!-- tournaments -->
-              <li class="nav-item">
-                  <% if (title == "Tournaments") { %>
-                      <a class="nav-link active" href="/tournamentslist">
-                          <i class="fa-solid fa-trophy"></i> Tournaments
-                      </a>
-                  <% } else { %>
-                      <a class="nav-link" href="/tournamentslist">
-                          <i class="fa-solid fa-trophy"></i> Tournaments
-                      </a>
-                  <% } %>
-              </li>
-
-              <!-- login -->
-              <li class="nav-item">
-                  <% if (title == "Login") { %>
-                      <a class="nav-link active" href="/login">Login</a>
-                  <% } else { %>
-                      <a class="nav-link" href="/login">Login</a>
-                  <% } %>
-              </li>
-
-              <!-- register -->
-              <li class="nav-item">
-                  <% if (title == "Register") { %>
-                      <a class="nav-link active" href="/register">Register</a>
-                  <% } else { %>
-                      <a class="nav-link" href="/register">Register</a>
-                  <% } %>
-              </li>
-          </ul>
-      </div>
-  </div>
-</nav>
+<nav class="navbar navbar-light fixed-top" style="background-color: #505050; padding: 5px 15px;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/" style="color: white;">Tournament Maker</a>
+      <ul class="navbar-nav d-flex flex-row ms-auto" style="list-style: none; margin: 0; padding: 0;">
+        <!-- home -->
+        <li class="nav-item mx-2">
+          <% if (title == "Home") { %>
+            <a class="nav-link active" href="/home">
+              <img src="/Assets/images/logo.png" alt="Home" class="nav-image">
+            </a>
+          <% } else { %>
+            <a class="nav-link" href="/home">
+              <img src="/Assets/images/logo.png" alt="Home" class="nav-image">
+            </a>
+          <% } %>
+        </li>
+  
+        <!-- tournaments -->
+        <li class="nav-item mx-2">
+          <% if (title == "Tournaments") { %>
+            <a class="nav-link active" href="/tournamentslist" style="color: white;">
+              <i class="fa-solid fa-trophy"></i> Tournaments
+            </a>
+          <% } else { %>
+            <a class="nav-link" href="/tournamentslist" style="color: white;">
+              <i class="fa-solid fa-trophy"></i> Tournaments
+            </a>
+          <% } %>
+        </li>
+  
+        <!-- login -->
+        <li class="nav-item mx-2">
+          <% if (title == "Login") { %>
+            <a class="nav-link active" href="/login" style="color: white;">Login</a>
+          <% } else { %>
+            <a class="nav-link" href="/login" style="color: white;">Login</a>
+          <% } %>
+        </li>
+  
+        <!-- register -->
+        <li class="nav-item mx-2">
+          <% if (title == "Register") { %>
+            <a class="nav-link active" href="/register" style="color: white;">Register</a>
+          <% } else { %>
+            <a class="nav-link" href="/register" style="color: white;">Register</a>
+          <% } %>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  

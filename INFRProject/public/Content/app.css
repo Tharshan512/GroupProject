@@ -1,3 +1,6 @@
+
+
+
 .nav-image {
     width: 30px; 
     height: 30px; 
@@ -10,7 +13,7 @@ body {
     background-color: #f8f8f8;
     color: #333;
     margin: 0;
-    padding: 0px;
+    padding: 50px;
 }
 #listMain{min-width: 100%;}
 
@@ -57,3 +60,8 @@ p {
 
 }
 
+body {
+    background-color: rgba(0, 0, 0, 0.301)
+     !important; /* Ensure the entire page background fits the theme */
+    color: #e0e0e0; /* Light text */
+}
