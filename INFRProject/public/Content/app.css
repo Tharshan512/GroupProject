@@ -7,7 +7,7 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #f8f8f8;
+    background-color: #9500ff;
     color: #333;
     margin: 0;
     padding: 0px;
@@ -40,7 +40,7 @@ p {
 .create-tournament-button {
     display: inline-block;
     background-color: #4CAF50; 
-    color: white; 
+    color: rgb(255, 0, 0); 
     border: none;
     padding: 15px 30px;
     font-size: 1em;
