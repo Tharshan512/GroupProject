@@ -1,1 +1,1 @@
-module.exports={"URI":"mongodb+srv://Project:Access@cluster0.9zdn5.mongodb.net/"}
+module.exports={"URI":"mongodb+srv://Project3:Test123@cluster0.9zdn5.mongodb.net/"}
